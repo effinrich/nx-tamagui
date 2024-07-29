@@ -3,13 +3,19 @@
   "version": "0.0.1",
   "private": true,
   "dependencies": {
+    "@react-navigation/native": "*",
+    "@tamagui/config": "*",
+    "@tamagui/lucide-icons": "*",
+    "@tamagui/toast": "*",
     "@testing-library/jest-native": "*",
     "@testing-library/react-native": "*",
+    "expo-router": "*",
+    "expo": "*",
     "metro-config": "*",
     "react-native": "*",
-    "expo": "*",
     "react-native-svg": "*",
-    "react-native-web": "*"
+    "react-native-web": "*",
+    "tamagui": "*"
   },
   "scripts": {
     "eas-build-pre-install": "cd ../../ && node tools/scripts/eas-build-pre-install.mjs . apps/tamagui-app && cp package-lock.json apps/tamagui-app",

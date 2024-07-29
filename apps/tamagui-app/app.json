@@ -28,6 +28,7 @@
       "bundler": "metro"
     },
     "plugins": [
+      "expo-font",
       [
         "@config-plugins/detox",
         {
@@ -35,6 +36,9 @@
           "subdomains": ["10.0.2.2", "localhost"]
         }
       ]
-    ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
   }
 }
