@@ -19,6 +19,14 @@
       "{workspaceRoot}/.github/workflows/ci.yml"
     ]
   },
+  "targetDefaults": {
+    "test:knip": {
+      "cache": true,
+      "inputs": [
+        "{workspaceRoot}/**/*"
+      ]
+    }
+  },
   "plugins": [
     {
       "plugin": "@nx/expo/plugin",

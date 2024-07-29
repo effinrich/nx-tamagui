@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "knip": "knip"
+    "app:serve-web": "nx run tamagui-app:serve --verbose",
+    "test:knip": "knip"
   },
   "private": true,
   "dependencies": {

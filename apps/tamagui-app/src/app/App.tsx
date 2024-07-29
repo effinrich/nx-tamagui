@@ -8,7 +8,6 @@ import { useFonts } from 'expo-font'
 import { SplashScreen, Stack/*, ErrorBoundary*/ } from 'expo-router'
 import { Provider } from './Provider';
 
-
 export const unstable_settings = {
   // Ensure that reloading on `/modal` keeps a back button present.
   initialRouteName: '(tabs)',
