@@ -1,12 +1,14 @@
-const { withNxMetro } = require('@nx/expo');
-const { getDefaultConfig } = require('@expo/metro-config');
-const { mergeConfig } = require('metro-config');
-const { withTamagui } = require('@tamagui/metro-plugin');
+const { withNxMetro } = require('@nx/expo')
+const { getDefaultConfig } = require('@expo/metro-config')
+const { mergeConfig } = require('metro-config')
+const { withTamagui } = require('@tamagui/metro-plugin')
+
 const defaultConfig = getDefaultConfig(__dirname, {
   // [Web-only]: Enables CSS support in Metro.
-  isCSSEnabled: true,
-});
-const { assetExts, sourceExts } = defaultConfig.resolver;
+  isCSSEnabled: true
+})
+
+const { assetExts, sourceExts } = defaultConfig.resolver
 
 /**
  * Metro configuration
@@ -16,13 +18,13 @@ const { assetExts, sourceExts } = defaultConfig.resolver;
  */
 const customConfig = {
   transformer: {
-    babelTransformerPath: require.resolve('react-native-svg-transformer'),
+    babelTransformerPath: require.resolve('react-native-svg-transformer')
   },
   resolver: {
-    assetExts: assetExts.filter((ext) => ext !== 'svg'),
-    sourceExts: [...sourceExts, 'cjs', 'mjs', 'svg'],
-  },
-};
+    assetExts: assetExts.filter(ext => ext !== 'svg'),
+    sourceExts: [...sourceExts, 'cjs', 'mjs', 'svg']
+  }
+}
 
 // Enable Tamagui and add nice web support with optimizing compiler + CSS extraction
 // module.exports = withTamagui(defaultConfig, {
@@ -33,8 +35,8 @@ const customConfig = {
 const tamaguiConfig = withTamagui(defaultConfig, {
   components: ['tamagui'],
   config: './tamagui.config.ts',
-  outputCSS: './tamagui-web.css',
-});
+  outputCSS: './tamagui-web.css'
+})
 
 module.exports = withNxMetro(
   mergeConfig(defaultConfig, tamaguiConfig, customConfig),
@@ -45,6 +47,6 @@ module.exports = withNxMetro(
     // all the file extensions used for imports other than 'ts', 'tsx', 'js', 'jsx', 'json'
     extensions: [],
     // Specify folders to watch, in addition to Nx defaults (workspace libraries and node_modules)
-    watchFolders: [],
+    watchFolders: []
   }
-);
+)

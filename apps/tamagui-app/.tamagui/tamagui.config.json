@@ -198,6 +198,8 @@
               "zoom": true,
               "scaleZ": true,
               "shadowOpacity": true,
+              "transition": true,
+              "textWrap": true,
               "backdropFilter": true,
               "background": true,
               "backgroundAttachment": true,
@@ -489,6 +491,8 @@
               "zoom": true,
               "scaleZ": true,
               "shadowOpacity": true,
+              "transition": true,
+              "textWrap": true,
               "backdropFilter": true,
               "background": true,
               "backgroundAttachment": true,
@@ -762,6 +766,8 @@
               "zoom": true,
               "scaleZ": true,
               "shadowOpacity": true,
+              "transition": true,
+              "textWrap": true,
               "backdropFilter": true,
               "background": true,
               "backgroundAttachment": true,
@@ -1008,6 +1014,8 @@
               "zoom": true,
               "scaleZ": true,
               "shadowOpacity": true,
+              "transition": true,
+              "textWrap": true,
               "backdropFilter": true,
               "background": true,
               "backgroundAttachment": true,
@@ -23413,6 +23421,7 @@
             "defaultProps": {
               "flexDirection": "column",
               "tag": "button",
+              "tabIndex": 0,
               "unstyled": false
             },
             "validStyles": {
@@ -23647,6 +23656,7 @@
             "defaultProps": {
               "flexDirection": "column",
               "tag": "button",
+              "tabIndex": 0,
               "unstyled": false
             },
             "validStyles": {
@@ -27300,9 +27310,6 @@
         "minWidth": 1651
       }
     },
-    "defaultFont": "$body",
-    "shouldAddPrefersColorThemes": true,
-    "themeClassNameOnRoot": true,
     "themes": {
       "dark": {
         "color1": "#050505",
@@ -53270,6 +53277,20 @@
           "name": "color-192",
           "val": "hsl(53, 100%, 91.0%)",
           "variable": ""
+        },
+        "white": {
+          "isVar": true,
+          "key": "$white",
+          "name": "color-1",
+          "val": "#fff",
+          "variable": ""
+        },
+        "black": {
+          "isVar": true,
+          "key": "$black",
+          "name": "color-2",
+          "val": "#000",
+          "variable": ""
         }
       },
       "radius": {
@@ -53369,6 +53390,27 @@
           "key": "$true",
           "name": "radius-14",
           "val": 9,
+          "variable": ""
+        },
+        "sm": {
+          "isVar": true,
+          "key": "$sm",
+          "name": "radius-1",
+          "val": 4,
+          "variable": ""
+        },
+        "md": {
+          "isVar": true,
+          "key": "$md",
+          "name": "radius-2",
+          "val": 8,
+          "variable": ""
+        },
+        "lg": {
+          "isVar": true,
+          "key": "$lg",
+          "name": "radius-3",
+          "val": 12,
           "variable": ""
         }
       },
@@ -53815,6 +53857,27 @@
           "name": "space-57",
           "val": -186,
           "variable": ""
+        },
+        "sm": {
+          "isVar": true,
+          "key": "$sm",
+          "name": "space-1",
+          "val": 15,
+          "variable": ""
+        },
+        "md": {
+          "isVar": true,
+          "key": "$md",
+          "name": "space-2",
+          "val": 20,
+          "variable": ""
+        },
+        "lg": {
+          "isVar": true,
+          "key": "$lg",
+          "name": "space-3",
+          "val": 25,
+          "variable": ""
         }
       },
       "size": {
@@ -54020,23 +54083,47 @@
           "name": "size-13",
           "val": 48,
           "variable": ""
+        },
+        "sm": {
+          "isVar": true,
+          "key": "$sm",
+          "name": "size-1",
+          "val": 38,
+          "variable": ""
+        },
+        "md": {
+          "isVar": true,
+          "key": "$md",
+          "name": "size-2",
+          "val": 46,
+          "variable": ""
+        },
+        "lg": {
+          "isVar": true,
+          "key": "$lg",
+          "name": "size-3",
+          "val": 60,
+          "variable": ""
         }
       }
     },
-    "mediaQueryDefaultActive": {
-      "xl": true,
-      "lg": true,
-      "md": true,
-      "sm": true,
-      "xs": true,
-      "xxs": false
-    },
     "selectionStyles": "Function",
+    "settings": {
+      "webContainerType": "inline-size",
+      "defaultFont": "body",
+      "shouldAddPrefersColorThemes": true,
+      "themeClassNameOnRoot": true,
+      "mediaQueryDefaultActive": {
+        "xl": true,
+        "lg": true,
+        "md": true,
+        "sm": true,
+        "xs": true,
+        "xxs": false
+      }
+    },
     "unset": {
       "fontFamily": "$body"
-    },
-    "settings": {
-      "webContainerType": "inline-size"
     },
     "inverseShorthands": {
       "userSelect": "ussel",
@@ -54123,6 +54210,7 @@
     },
     "parsed": true,
     "getNewCSS": "Function",
+    "defaultFont": "$body",
     "fontSizeTokens": {},
     "specificTokens": {
       "$color.blue1Light": {
@@ -55469,6 +55557,20 @@
         "val": "hsl(53, 100%, 91.0%)",
         "variable": ""
       },
+      "$color.white": {
+        "isVar": true,
+        "key": "$white",
+        "name": "color-1",
+        "val": "#fff",
+        "variable": ""
+      },
+      "$color.black": {
+        "isVar": true,
+        "key": "$black",
+        "name": "color-2",
+        "val": "#000",
+        "variable": ""
+      },
       "$radius.0": {
         "isVar": true,
         "key": "$0",
@@ -55565,6 +55667,27 @@
         "key": "$true",
         "name": "radius-14",
         "val": 9,
+        "variable": ""
+      },
+      "$radius.sm": {
+        "isVar": true,
+        "key": "$sm",
+        "name": "radius-1",
+        "val": 4,
+        "variable": ""
+      },
+      "$radius.md": {
+        "isVar": true,
+        "key": "$md",
+        "name": "radius-2",
+        "val": 8,
+        "variable": ""
+      },
+      "$radius.lg": {
+        "isVar": true,
+        "key": "$lg",
+        "name": "radius-3",
+        "val": 12,
         "variable": ""
       },
       "$zIndex.0": {
@@ -56008,6 +56131,27 @@
         "val": -186,
         "variable": ""
       },
+      "$space.sm": {
+        "isVar": true,
+        "key": "$sm",
+        "name": "space-1",
+        "val": 15,
+        "variable": ""
+      },
+      "$space.md": {
+        "isVar": true,
+        "key": "$md",
+        "name": "space-2",
+        "val": 20,
+        "variable": ""
+      },
+      "$space.lg": {
+        "isVar": true,
+        "key": "$lg",
+        "name": "space-3",
+        "val": 25,
+        "variable": ""
+      },
       "$size.0": {
         "isVar": true,
         "key": "$0",
@@ -56209,6 +56353,27 @@
         "key": "$4.5",
         "name": "size-13",
         "val": 48,
+        "variable": ""
+      },
+      "$size.sm": {
+        "isVar": true,
+        "key": "$sm",
+        "name": "size-1",
+        "val": 38,
+        "variable": ""
+      },
+      "$size.md": {
+        "isVar": true,
+        "key": "$md",
+        "name": "size-2",
+        "val": 46,
+        "variable": ""
+      },
+      "$size.lg": {
+        "isVar": true,
+        "key": "$lg",
+        "name": "size-3",
+        "val": 60,
         "variable": ""
       }
     }

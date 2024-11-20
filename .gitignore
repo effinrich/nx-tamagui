@@ -58,3 +58,5 @@ cache/
 
 
 apps/tamagui-app-e2e/artifacts
+
+storybook-static

@@ -3,15 +3,19 @@ import '@tamagui/core/reset.css'
 
 import { useEffect } from 'react'
 import { useColorScheme } from 'react-native'
-import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native'
+import {
+  DarkTheme,
+  DefaultTheme,
+  ThemeProvider
+} from '@react-navigation/native'
 import { useFonts } from 'expo-font'
-import { SplashScreen, Stack/*, ErrorBoundary*/ } from 'expo-router'
-import { Provider } from './Provider';
+import { SplashScreen, Stack /*, ErrorBoundary*/ } from 'expo-router'
+import { ThemeProvider as TamaguiProvider } from '@shared-ui'
 
 export const unstable_settings = {
   // Ensure that reloading on `/modal` keeps a back button present.
-  initialRouteName: '(tabs)',
-};
+  initialRouteName: '(tabs)'
+}
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync()
@@ -19,7 +23,7 @@ SplashScreen.preventAutoHideAsync()
 const App = () => {
   const [interLoaded, interError] = useFonts({
     Inter: require('@tamagui/font-inter/otf/Inter-Medium.otf'),
-    InterBold: require('@tamagui/font-inter/otf/Inter-Bold.otf'),
+    InterBold: require('@tamagui/font-inter/otf/Inter-Bold.otf')
   })
 
   useEffect(() => {
@@ -40,13 +44,13 @@ const AppNav = () => {
   const colorScheme = useColorScheme()
 
   return (
-    <Provider>
+    <TamaguiProvider>
       <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
         <Stack>
           <Stack.Screen
             name="(tabs)"
             options={{
-              headerShown: false,
+              headerShown: false
             }}
           />
 
@@ -57,14 +61,13 @@ const AppNav = () => {
               presentation: 'modal',
               animation: 'slide_from_right',
               gestureEnabled: true,
-              gestureDirection: 'horizontal',
+              gestureDirection: 'horizontal'
             }}
           />
         </Stack>
       </ThemeProvider>
-    </Provider>
+    </TamaguiProvider>
   )
 }
-
 
 export default App

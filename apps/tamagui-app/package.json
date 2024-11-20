@@ -19,7 +19,6 @@
     "react": "*"
   },
   "scripts": {
-    "eas-build-pre-install": "cd ../../ && node tools/scripts/eas-build-pre-install.mjs . apps/tamagui-app && cp package-lock.json apps/tamagui-app",
     "eas-build-post-install": "cd ../../ && node tools/scripts/eas-build-post-install.mjs . apps/tamagui-app",
     "android": "expo run:android",
     "ios": "expo run:ios"

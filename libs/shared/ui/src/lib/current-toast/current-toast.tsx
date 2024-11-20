@@ -1,7 +1,7 @@
-import { Toast, useToastState } from '@tamagui/toast';
-import {  YStack, isWeb } from 'tamagui';
+import { Toast, useToastState } from '@tamagui/toast'
+import { YStack, isWeb } from 'tamagui'
 
-export const CurrentToast= () => {
+export const CurrentToast = () => {
   const currentToast = useToastState()
 
   if (!currentToast || currentToast.isHandledNatively) return null
@@ -27,4 +27,3 @@ export const CurrentToast= () => {
     </Toast>
   )
 }
-

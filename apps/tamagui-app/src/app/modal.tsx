@@ -25,5 +25,5 @@ export default function ModalScreen() {
         </Anchor>
       </XStack>
     </View>
-  );
+  )
 }
